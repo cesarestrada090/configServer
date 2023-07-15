@@ -2,12 +2,6 @@ server:
   port: ${PORT:0}
 
 spring:
-    
-  cloud:
-        
-    bus:
-      enabled: true
-      destination: springCloudBus
       
   datasource:
     driver-class-name: org.h2.Driver
@@ -30,18 +24,6 @@ spring:
         '[format_sql]': true
         '[event.merge.entity_copy_observer]': allow
     show-sql: true
-  
-  boot:
-    admin:
-      client:
-        enabled: true
-  
-  zipkin:
-    enabled: true
-    sender:
-      type: kafka
-    kafka:
-      topic: zipkin
 
 management:
   endpoints:
